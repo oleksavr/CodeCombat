@@ -21,6 +21,7 @@ def summonTroops():
 def commandTroops():
     friends = hero.findFriends()
     for friendIndex, friend in enumerate(friends):
+        friendIndex += 1
         # Use % to wrap around defendPoints based on friendIndex
         hero.command(friend, 'defend', defendPoints[friendIndex % len(defendPoints)])
         pass
